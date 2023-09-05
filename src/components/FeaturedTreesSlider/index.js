@@ -46,6 +46,7 @@ function FeaturedTreesSlider({ trees, size = null, isMobile, link }) {
       {!isMobile && leftScrollButton && (
         <Button
           onClick={() => scrollHandler(-500)}
+          aria-label="scroll left"
           sx={{
             left: 0,
             // borderRadius: '40px 0 0 40px',
@@ -99,7 +100,7 @@ function FeaturedTreesSlider({ trees, size = null, isMobile, link }) {
               <CardMedia
                 component="img"
                 image={getThumbnailImageUrls(tree.image_url, 208, 232)}
-                alt="tree"
+                alt=""
                 sx={{
                   borderRadius: '16px',
                   transition: 'transform .5s',
@@ -141,6 +142,7 @@ function FeaturedTreesSlider({ trees, size = null, isMobile, link }) {
       {!isMobile && rightScrollButton && (
         <Button
           onClick={() => scrollHandler(500)}
+          aria-label="scroll right"
           sx={{
             right: 0,
             position: 'absolute',
